@@ -1,4 +1,4 @@
-const weddingDate = new Date("2026-05-14T08:00:00");
+const weddingDate = new Date("2026-06-14T08:00:00");
 
 const countdownElement = document.getElementById("countdown");
 
@@ -12,7 +12,7 @@ function updateCountdown() {
       <div class="count-number">14</div>
     </div>
     <div class="count-box">
-      <div class="count-number">Mei</div>
+      <div class="count-number">Juni</div>
     </div>
     <div class="count-box">
       <div class="count-number">2026</div>
