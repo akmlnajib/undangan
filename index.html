@@ -281,8 +281,19 @@ kirimBtn.addEventListener("click", async () => {
       ucapan,
       waktu: serverTimestamp()
     });
-
-    Swal.fire({ icon: "success", text: "Ucapan berhasil dikirim!" });
+Swal.fire({
+  position: "top-end",
+  title: "Ucapan berhasil dikirim!",
+  showConfirmButton: false,
+  timer: 1500,
+  width: '250px',
+  padding: '10px',
+  background: '#d4af37', // warna background (dark)
+  color: 'white', // warna teks
+  customClass: {
+    popup: 'swal-small'
+  }
+});
 
     document.getElementById("nama").value = "";
     document.getElementById("ucapan").value = "";
@@ -295,9 +306,6 @@ kirimBtn.addEventListener("click", async () => {
   kirimBtn.disabled = false;
 });
 
-// =======================
-// 🔥 RENDER FUNCTION
-// =======================
 let cacheData = [];
 
 function render() {
@@ -324,9 +332,6 @@ function render() {
   totalUcapan.textContent = cacheData.length;
 }
 
-// =======================
-// 🔥 REALTIME FIRESTORE
-// =======================
 const q = query(collection(db, "ucapan"), orderBy("waktu", "desc"));
 
 onSnapshot(q, (snapshot) => {
@@ -337,9 +342,6 @@ onSnapshot(q, (snapshot) => {
   render();
 });
 
-// =======================
-// 🔥 AUTO UPDATE TIME AGO
-// =======================
 setInterval(() => {
   render();
 }, 30000); // update tiap 30 detik

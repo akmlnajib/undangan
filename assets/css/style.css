@@ -166,3 +166,15 @@ body {
 .border-pink-500 {
   border-color: #d4af37 !important;
 }
+
+.swal-small {
+  font-size: 12px;
+}
+
+.swal-small .swal2-title {
+  font-size: 14px;
+}
+
+.swal-small .swal2-icon {
+  transform: scale(0.7);
+}
