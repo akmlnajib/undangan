@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const weddingDate = new Date("2026-05-14T00:00:00");
+=======
+const weddingDate = new Date("2026-06-14T00:00:00");
+>>>>>>> a025dfeb137da184ad7b2753e66fadc04b538c27
 const countdownElement = document.getElementById("countdown");
 
 function updateCountdown() {
@@ -7,6 +11,7 @@ function updateCountdown() {
 
   if (diff <= 0) {
     countdownElement.innerHTML = `
+<<<<<<< HEAD
     <div class="count-box">
       <div class="count-number">14</div>
     </div>
@@ -16,6 +21,11 @@ function updateCountdown() {
     <div class="count-box">
       <div class="count-number">2026</div>
     </div>
+=======
+      <div class="text-3xl font-bold text-pink-600">
+        Hari Bahagia 🎉
+      </div>
+>>>>>>> a025dfeb137da184ad7b2753e66fadc04b538c27
     `;
     return;
   }
@@ -62,7 +72,11 @@ window.addEventListener("load", () => {
 function createFlower() {
   const flower = document.createElement("div");
   flower.classList.add("flower");
+<<<<<<< HEAD
   flower.innerHTML = "🍂"; // daun gugur (lebih natural)
+=======
+  flower.innerHTML = "🌸";
+>>>>>>> a025dfeb137da184ad7b2753e66fadc04b538c27
   flower.style.left = Math.random() * 100 + "vw";
   flower.style.animationDuration = Math.random() * 3 + 3 + "s";
   flower.style.fontSize = Math.random() * 10 + 20 + "px";
@@ -82,7 +96,11 @@ document.getElementById("openBtn").addEventListener("click", () => {
 musicBtn.addEventListener("click", () => {
   if (music.paused) {
     music.play();
+<<<<<<< HEAD
     musicBtn.innerHTML = '<i class="fa-solid fa-pause text-pink-100"></i>';
+=======
+    musicBtn.innerHTML = '<i class="fa-solid fa-pause text-pink-600"></i>';
+>>>>>>> a025dfeb137da184ad7b2753e66fadc04b538c27
   } else {
     music.pause();
     musicBtn.innerHTML = '<i class="fa-solid fa-play text-pink-600"></i>';
