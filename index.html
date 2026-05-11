@@ -266,7 +266,7 @@ kirimBtn.addEventListener("click", async () => {
   const kehadiran = document.getElementById("kehadiran").value;
   const ucapan = document.getElementById("ucapan").value.trim();
 
-  if (!nama || !ucapan) {
+  if (!nama || !kehadiran || !ucapan) {
     Swal.fire({ icon: "warning", text: "Nama dan ucapan wajib diisi!" });
     return;
   }
