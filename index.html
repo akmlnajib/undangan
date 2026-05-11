@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luthfi & Salsabila Wedding Invitation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+  <!-- Loading Screen -->
+  <div id="loading" class="fixed inset-0 flex flex-col items-center justify-center bg-pink-100 z-50">
+    <h1 class="font-esthetic text-5xl text-pink-600 mb-2 animate-pulse">The Wedding Invitation of</h1>
+    <h2 class="font-esthetic text-6xl md:text-7xl text-pink-600 mb-2" data-aos="fade-down"
+      style="animation-delay: 0.9s;">Luthfi</h2>
+    <h2 class="font-elegant text-5xl text-pink-600 mb-2 " style="animation-delay: 0.5s;" data-aos="fade-down">&</h2>
+    <h2 class="font-esthetic text-6xl md:text-7xl text-pink-600" style="animation-delay: 0.2s;" data-aos="fade-down">
+      Salsabila</h2>
+  </div>
+
+  <!-- Landing Page -->
+  <section id="landing" class="hidden flex-col items-center justify-center text-center px-6">
+    <h1 data-aos="fade-down" class="font-esthetic text-5xl text-pink-600 mb-2">The Wedding Invitation of</h1>
+    <div class="flex flex-col items-center mb-6" data-aos="fade-up">
+      <img src="assets/images/images.png" alt="Luthfi & Salsabila"
+        class="rounded-full w-32 h-32 object-cover shadow-lg mb-3">
+      <h1 class="font-esthetic text-5xl text-pink-600">Luthfi & Salsabila</h1>
+      <h2 class="text-lg text-gray-600 mb-2 tracking-widest">Kepada Yth Bapak/Ibu/Saudara/Saudari</h2>
+      <h1 id="guestName" class="font-esthetic text-2xl md:text-2xl text-pink-600 font-semibold animate-fade-in"></h1>
+    </div>
+    <div class="flex justify-center mt-5">
+      <button id="openBtn" data-aos="fade-up"
+        class="flex items-center justify-center gap-2 text-pink-600 px-6 py-3 rounded-full shadow hover:bg-brown-100 hover:text-white transition text-lg font-medium">
+        <i id="btnIcon" class="fa-solid fa-envelope"></i>
+        Buka Undangan
+      </button>
+    </div>
+  </section>
+
+  <!-- Undangan Utama -->
+  <section id="invitation" class="hidden w-full text-center px-6">
+    <div class="flex flex-col items-center mb-6 mt-4">
+    <h1 data-aos="fade-down" class="font-esthetic text-5xl text-pink-600 mb-2">The Wedding Invitation of</h1>
+      <img data-aos="fade-down" src="assets/images/images.png" alt="Luthfi & Salsabila"
+        class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
+      <h1 data-aos="fade-left" class="font-esthetic text-6xl text-pink-600">Luthfi & Salsabila</h1>
+
+      <div id="countdown" class="mt-8 flex flex-row gap-3 justify-center text-pink-700"></div>
+    </div>
+
+    <h2 class="font-arabic text-2xl text-pink-600 mb-2" style="font-size: 2rem;">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    </h2>
+    <p data-aos="fade-up" class="text-gray-600 mb-4 font-light max-w-md mx-auto">Atas Rahmat Tuhan Yang Maha Esa, kami
+      bermaksud menyelenggarakan Upacara Pernikahan. Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga,
+      apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu pada acara</p>
+    
+    <div class="flex flex-col items-center mb-6 mt-4">
+      <img data-aos="fade-right" src="assets/images/pria.png" alt="Luthfi & Salsabila"
+        class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
+      <h2 class="font-esthetic text-4xl text-pink-600 mb-4" data-aos="fade-right">Luthfi Hanadi Fathurohman</h2>
+      <p data-aos="fade-right" class="text-gray-500 italic font-elegant" data-aos="fade-right">Anak dari Bapak
+        Amat Sohibul dan Ibu Supriyati</p>
+
+      <h2 class="font-esthetic text-4xl text-pink-600 mb-5 mt-5" data-aos="fade-down">&</h2>
+      <img data-aos="fade-left" src="assets/images/wanita.png" alt="Luthfi & Salsabila"
+        class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
+      <h2 class="font-esthetic text-4xl text-pink-600 mb-4" data-aos="fade-left">Salsabila Khoritunnisa</h2>
+      <p data-aos="fade-right" class="text-gray-500 italic font-elegant" data-aos="fade-left">Anak dari Bapak
+        Lorem Ipsum dan Ibu Lorem Ipsum</p>
+    </div>
+
+    <div class="bg-pink-50 mt-8 p-6 rounded-2xl shadow-md max-w-md mx-auto">
+      <h2 class="font-elegant text-2xl text-pink-600 mb-2" style="font-size: 2rem;">Akad & Resepsi</h2>
+      <p class="text-gray-500 font-light" data-aos="fade-down"><i class="fa-solid fa-calendar-days text-pink-600"></i>
+        Kamis, 14 Mei 2026</p>
+      <p class="text-gray-500 mb-4 font-light" data-aos="fade-left"><i
+          class="fa-solid fa-alarm-clock text-pink-600"></i>
+        08:00 WIB s/d Selesai</p>
+      <h2 class="font-elegant text-2xl text-pink-600 mb-2" style="font-size: 2rem;">Lokasi</h2>
+      <div class="mt-8">
+        <iframe class="w-full h-64 rounded-2xl" src="https://www.google.com/maps/embed?pb=YOUR_MAP_LINK"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+      <p class="text-gray-700 italic font-elegant" data-aos="fade-up">"May our love be everlasting, blessed with
+        happiness and harmony."
+      </p>
+    </div>
+
+    <section class="py-16 bg-pink-50 text-center">
+  <div class="max-w-2xl mx-auto px-4">
+    
+    <h2 class="text-3xl font-elegant mb-6">Ayat Suci Al-Qur'an</h2>
+
+    <p class="text-xl leading-loose text-gray-800 mb-4">
+      وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ وَالصَّالِحِينَ مِنْ عِبَادِكُمْ 
+      
+      وَإِمَائِكُمْ ۚ إِن يَكُونُوا فُقَرَاءَ يُغْنِهِمُ اللَّهُ مِن فَضْلِهِ ۗ 
+      وَاللَّهُ وَاسِعٌ عَلِيمٌ
+    </p>
+
+    <p class="italic text-gray-600 mb-2">
+      "Dan nikahkanlah orang-orang yang masih membujang di antara kamu, 
+      dan juga orang-orang yang layak (menikah) dari hamba sahayamu yang 
+      laki-laki dan perempuan. Jika mereka miskin, Allah akan memberi 
+      kemampuan kepada mereka dengan karunia-Nya. Dan Allah Maha Luas 
+      (pemberian-Nya), Maha Mengetahui."
+    </p>
+
+    <p class="text-sm text-gray-500 mt-4">
+      (QS. An-Nur: 32)
+    </p>
+
+  </div>
+</section>
+
+    <div class="bg-pink-50 mt-8 p-6 rounded-2xl shadow-md max-w-md mx-auto" data-aos="fade-up">
+      <h2 class="font-esthetic text-3xl text-pink-600 mb-6 text-center">Kirim Hadiah</h2>
+
+      <div class="space-y-4">
+        <!-- Luthfi -->
+        <div class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+          <div class="flex items-center gap-4">
+            <img src="assets/images/bca-logo.png" alt="Logo BCA" class="w-14 h-auto object-contain">
+            <div class="flex flex-col justify-center pl-8">
+              <p class="font-semibold text-gray-800 text-lg leading-tight">5156008750</p>
+              <p class="text-sm text-gray-600">Luthfi Hanadi Fathurohman</p>
+            </div>
+          </div>
+          <button onclick="copyToClipboard('5156008750', 'Nomor rekening berhasil disalin')"
+            class="text-pink-600 hover:text-pink-700 text-xl" title="Salin Nomor">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+
+        <!-- Salsabila -->
+        <div class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+          <div class="flex items-center gap-4">
+            <img src="assets/images/bca-logo.png" alt="Logo BCA" class="w-14 h-auto object-contain">
+            <div class="flex flex-col justify-center pl-10"> <!-- penting -->
+              <p class="font-semibold text-gray-800 text-lg leading-tight">2440356985</p>
+              <p class="text-sm text-gray-600">Salsabila Khoritunnisa</p>
+            </div>
+          </div>
+          <button onclick="copyToClipboard('2440356985', 'Nomor rekening berhasil disalin')"
+            class="text-pink-600 hover:text-pink-700 text-xl" title="Salin Nomor">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <center>
+      <div class="bg-white mt-8 rounded-2xl shadow-md p-6 w-full max-w-md">
+        <h2 class="font-esthetic text-3xl text-pink-600 mb-4">Ucapan & Doa</h2>
+        <input id="nama" placeholder="Nama" class="w-full border p-2 rounded mb-3">
+        <select id="kehadiran" class="w-full border p-2 rounded mb-3">
+          <option value="" disabled selected>Pilih</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+        <textarea id="ucapan" placeholder="Tulis ucapan..." rows="3" class="w-full border p-2 rounded mb-3"></textarea>
+        <button id="kirimBtn" class="w-full bg-white text-black py-2 rounded hover:bg-white-100">
+          <i class="fa-solid fa-paper-plane"></i> Kirim Ucapan
+        </button>
+      </div>
+    </center>
+
+    <div
+      class="max-w-md mx-auto mt-6 flex justify-between items-center text-gray-700 font-medium bg-white p-4 rounded-xl shadow-lg"
+      data-aos="fade-up">
+      <!-- Kehadiran -->
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-circle text-green-500 animate-pulse"></i>
+        <span class="bg-green-50 px-2.5 py-1 rounded-full text-gray-800 font-semibold text-lg"><span
+            id="countHadir">0</span> Hadir</span>
+      </div>
+
+      <!-- Komentar -->
+      <div class="flex items-center space-x-2">
+        <i class="fa-regular fa-comments text-pink-500"></i>
+        <span class="bg-pink-50 px-2.5 py-1 rounded-full text-gray-800 font-semibold text-lg"><span
+            id="totalUcapan">0</span> Komentar</span>
+      </div>
+    </div>
+    <!-- List Ucapan -->
+    <div id="daftarUcapan" class="max-w-md mx-auto mt-2 h-64 overflow-y-auto space-y-2 p-2 bg-pink-50 rounded"></div>
+
+
+    <footer data-aos="fade-up" class="mt-6 text-gray-500 text-sm font-elegant">
+      © 2025 Luthfi & Salsabila Wedding
+    </footer>
+  </section>
+
+  <!-- Musik -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music/pure-love-304010.mp3" type="audio/mp3">
+  </audio>
+
+  <button id="musicBtn" class="hidden"><i class="fa-solid fa-pause text-pink-600"></i></button>
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Non-module JS -->
+  <script src="assets/js/btnHover.js"></script>
+  <script src="assets/js/clipboard.js"></script>
+  <script src="assets/js/countdownLanding.js"></script>
+  <!-- Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    // CONFIG FIREBASE (punya kamu sudah benar)
+    const firebaseConfig = {
+      apiKey: "AIzaSyCA0mxRnjanLV7hBQq7hvGeAWSuKS4UjGE",
+      authDomain: "undangan-c9ad9.firebaseapp.com",
+      databaseURL: "https://undangan-c9ad9-default-rtdb.firebaseio.com",
+      projectId: "undangan-c9ad9",
+      storageBucket: "undangan-c9ad9.firebasestorage.app",
+      messagingSenderId: "512212345486",
+      appId: "1:512212345486:web:dbc1b824eca1d8028d9fdf",
+      measurementId: "G-7S0S83N0TE"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // ELEMENT
+const kirimBtn = document.getElementById("kirimBtn");
+const daftarUcapan = document.getElementById("daftarUcapan");
+const countHadir = document.getElementById("countHadir");
+const totalUcapan = document.getElementById("totalUcapan");
+
+// =======================
+// 🔥 FORMAT TIME AGO
+// =======================
+function timeAgo(timestamp) {
+  if (!timestamp) return "";
+
+  const now = new Date();
+  const time = new Date(timestamp.seconds * 1000);
+  const diff = Math.floor((now - time) / 1000);
+
+  if (diff < 60) return "Baru saja";
+  if (diff < 3600) return Math.floor(diff / 60) + " menit lalu";
+  if (diff < 86400) return Math.floor(diff / 3600) + " jam lalu";
+  if (diff < 2592000) return Math.floor(diff / 86400) + " hari lalu";
+
+  return time.toLocaleDateString("id-ID");
+}
+
+// =======================
+// 🔥 KIRIM DATA
+// =======================
+kirimBtn.addEventListener("click", async () => {
+  const nama = document.getElementById("nama").value.trim();
+  const kehadiran = document.getElementById("kehadiran").value;
+  const ucapan = document.getElementById("ucapan").value.trim();
+
+  if (!nama || !ucapan) {
+    Swal.fire({ icon: "warning", text: "Nama dan ucapan wajib diisi!" });
+    return;
+  }
+
+  kirimBtn.innerHTML = "Mengirim...";
+  kirimBtn.disabled = true;
+
+  try {
+    await addDoc(collection(db, "ucapan"), {
+      nama,
+      kehadiran,
+      ucapan,
+      waktu: serverTimestamp()
+    });
+
+    Swal.fire({ icon: "success", text: "Ucapan berhasil dikirim!" });
+
+    document.getElementById("nama").value = "";
+    document.getElementById("ucapan").value = "";
+
+  } catch (error) {
+    Swal.fire({ icon: "error", text: "Gagal kirim!" });
+  }
+
+  kirimBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Kirim Ucapan';
+  kirimBtn.disabled = false;
+});
+
+// =======================
+// 🔥 RENDER FUNCTION
+// =======================
+let cacheData = [];
+
+function render() {
+  daftarUcapan.innerHTML = "";
+  let hadir = 0;
+
+  cacheData.forEach((data) => {
+    if (data.kehadiran === "Hadir") hadir++;
+
+    daftarUcapan.innerHTML += `
+      <div class="bg-white p-3 rounded-lg shadow-sm border-l-4 border-pink-500 hover:scale-[1.01] transition">
+        <p class="font-semibold text-gray-800">
+          ${data.nama}
+          <span class="text-sm text-gray-500">
+            (${data.kehadiran}) • ${timeAgo(data.waktu)}
+          </span>
+        </p>
+        <p class="text-gray-700 mt-1">${data.ucapan}</p>
+      </div>
+    `;
+  });
+
+  countHadir.textContent = hadir;
+  totalUcapan.textContent = cacheData.length;
+}
+
+// =======================
+// 🔥 REALTIME FIRESTORE
+// =======================
+const q = query(collection(db, "ucapan"), orderBy("waktu", "desc"));
+
+onSnapshot(q, (snapshot) => {
+  cacheData = [];
+  snapshot.forEach((doc) => {
+    cacheData.push(doc.data());
+  });
+  render();
+});
+
+// =======================
+// 🔥 AUTO UPDATE TIME AGO
+// =======================
+setInterval(() => {
+  render();
+}, 30000); // update tiap 30 detik
+
+</script>
+</body>
+
+</html>

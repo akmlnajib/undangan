@@ -1,0 +1,168 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5efe6;
+  background-image: url('https://www.transparenttextures.com/patterns/batik.png');
+  overflow-x: hidden;
+  color: #5a3e1b;
+}
+
+.font-esthetic {
+  font-family: 'Great Vibes', cursive;
+  color: #7a5c2e;
+}
+
+.font-elegant {
+  font-family: 'Playfair Display', serif;
+  color: #6b4f2a;
+}
+
+/* 🔄 Loading Spinner (BATIK STYLE) */
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #e6dccb;
+  border-top: 8px solid #8b6f3d;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+/* AOS */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-aos="fade-up"] { transform: translateY(40px);}
+[data-aos="fade-down"] { transform: translateY(-40px);}
+[data-aos="fade-left"] { transform: translateX(-40px);}
+[data-aos="fade-right"] { transform: translateX(40px);}
+
+/* 🌸 GANTI FLOWER JADI BATIK ELEMENT */
+.flower {
+  position: fixed;
+  top: -50px;
+  font-size: 20px;
+  opacity: 0.7;
+  animation: fall linear forwards;
+  z-index: 1;
+  color: #8b6f3d; /* warna emas */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+/* 🎵 MUSIC BUTTON */
+#musicBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  background: #8b6f3d;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  z-index: 50;
+}
+
+#musicBtn:hover {
+  transform: scale(1.1);
+  background: #6b552d;
+}
+
+/* ⏳ COUNTDOWN BOX */
+.count-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(145deg, #fff8e7, #f0e2c2);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.count-box:hover {
+  transform: scale(1.05);
+}
+
+.count-number {
+  font-size: 1.5rem;
+  color: #8b6f3d;
+  font-weight: bold;
+}
+
+.count-label {
+  font-size: 0.8rem;
+  color: #6b4f2a;
+  margin-top: 2px;
+}
+
+/* ✍️ TYPING EFFECT BATIK */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #8b6f3d;
+  animation: typing 2s steps(20, end), blink 0.8s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0;}
+  to { width: 100%;}
+}
+
+@keyframes blink {
+  50% { border-color: transparent;}
+}
+
+/* 🔥 BONUS: CARD BATIK (AUTO KE SEMUA DIV PUTIH) */
+.bg-white {
+  background: rgba(255, 248, 220, 0.95) !important;
+  border: 1px solid #e0c48f;
+}
+
+/* TEXT PINK AUTO JADI BATIK */
+.text-pink-600,
+.text-pink-700 {
+  color: #8b6f3d !important;
+}
+
+/* BG PINK AUTO JADI BATIK */
+.bg-pink-50,
+.bg-pink-100 {
+  background-color: #f5efe6 !important;
+}
+
+/* BORDER PINK AUTO JADI GOLD */
+.border-pink-500 {
+  border-color: #d4af37 !important;
+}
