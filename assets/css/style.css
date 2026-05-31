@@ -11,6 +11,11 @@ body {
   color: #7a5c2e;
 }
 
+.font-esthetics {
+  font-family: '', cursive;
+  color: #7a5c2e;
+}
+
 .font-elegant {
   font-family: 'Playfair Display', serif;
   color: #6b4f2a;

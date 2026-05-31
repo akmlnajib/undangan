@@ -1,4 +1,4 @@
-const weddingDate = new Date("2026-06-14T08:00:00");
+const weddingDate = new Date("2026-06-14T07:00:00");
 
 const countdownElement = document.getElementById("countdown");
 
