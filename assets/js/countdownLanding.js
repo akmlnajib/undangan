@@ -9,6 +9,9 @@ function updateCountdown() {
   if (diff <= 0) {
     countdownElement.innerHTML = `
     <div class="count-box">
+      <div class="count-number text-sm">Minggu</div>
+    </div>
+    <div class="count-box">
       <div class="count-number">14</div>
     </div>
     <div class="count-box">
