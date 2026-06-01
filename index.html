@@ -24,44 +24,107 @@
 
 <body class="flex items-center justify-center min-h-screen">
   <!-- Loading Screen -->
-  <div id="loading" class="fixed inset-0 flex flex-col items-center justify-center bg-pink-100 z-50">
-    <h1 class="font-esthetic text-5xl text-pink-600 animate-pulse">The Wedding of</h1>
-    <h2 class="font-esthetic text-6xl md:text-7xl text-pink-600 mb-2" data-aos="fade-down"
-      style="animation-delay: 0.9s;">Luthfi</h2>
-    <h2 class="font-elegant text-5xl text-pink-600 mb-2 " style="animation-delay: 0.5s;" data-aos="fade-down">&</h2>
-    <h2 class="font-esthetic text-6xl md:text-7xl text-pink-600" style="animation-delay: 0.2s;" data-aos="fade-down">
-      Bila</h2>
+  <div id="loading" class="fixed inset-0 flex flex-col items-center justify-center bg-pink-100 z-50 overflow-hidden">
+  
+    <!-- KIRI -->
+    <img src="assets/images/gunungan.png"
+      class="absolute -left-24 top-1/2 -translate-y-1/2 w-56 opacity-10 pointer-events-none">
+  
+    <!-- KANAN -->
+    <img src="assets/images/gunungan.png"
+      class="absolute -right-24 top-1/2 -translate-y-1/2 w-56 opacity-10 pointer-events-none scale-x-[-1]">
+  
+    <!-- CONTENT -->
+    <h1 class="font-esthetic text-5xl text-pink-600 animate-pulse">
+      The Wedding of
+    </h1>
+  
+    <h2 class="font-esthetic text-6xl md:text-7xl text-pink-600 mb-2">
+      Luthfi
+    </h2>
+  
+    <h2 class="font-elegant text-5xl text-pink-600 mb-2">
+      &
+    </h2>
+  
+    <h2 class="font-esthetic text-6xl md:text-7xl text-pink-600">
+      Bila
+    </h2>
+  
   </div>
-
-  <!-- Landing Page -->
-  <section id="landing" class="hidden flex-col items-center justify-center text-center px-6">
-    <h1 data-aos="fade-down" class="font-esthetic text-5xl text-pink-600 mb-2">The Wedding of</h1>
-    <div class="flex flex-col items-center mb-6" data-aos="fade-up">
-      <img src="assets/images/images.png" alt="Luthfi & Salsabila"
-        class="rounded-full w-32 h-32 object-cover shadow-lg mb-3">
-      <h1 class="font-esthetic text-5xl text-pink-600 mb-2">Luthfi & Bila</h1>
-      <h2 class="text-lg text-gray-600 mb-2 tracking-widest">Minggu, 14 Juni 2026</h2>
-      <h2 class="text-lg text-gray-600 mb-2 tracking-widest">Kepada Yth Bapak/Ibu/Saudara/i</h2>
-      <h1 id="guestName" class="font-esthetics text-2xl md:text-2xl text-pink-600 font-semibold animate-fade-in"></h1>
+  <section id="landing" class="relative overflow-hidden hidden flex-col items-center justify-center text-center px-6">
+  
+    <!-- KIRI -->
+    <img src="assets/images/gunungan.png"
+      class="absolute -left-24 top-1/2 -translate-y-1/2 w-52 opacity-10 pointer-events-none">
+  
+    <!-- KANAN -->
+    <img src="assets/images/gunungan.png"
+      class="absolute -right-24 top-1/2 -translate-y-1/2 w-52 opacity-10 pointer-events-none scale-x-[-1]">
+  
+    <!-- CONTENT -->
+    <div class="relative z-10 w-full">
+      <h1 data-aos="fade-down" class="font-esthetic text-5xl text-pink-600 mb-2">
+        The Wedding of
+      </h1>
+  
+      <div class="flex flex-col items-center mb-6" data-aos="fade-up">
+        <img src="assets/images/images.png" class="rounded-full w-32 h-32 object-cover shadow-lg mb-3">
+  
+        <h1 class="font-esthetic text-5xl text-pink-600 mb-2">
+          Luthfi & Bila
+        </h1>
+  
+        <h2 class="text-lg text-gray-600 mb-2 tracking-widest">
+          Minggu, 14 Juni 2026
+        </h2>
+  
+        <h2 class="text-lg text-gray-600 mb-2 tracking-widest">
+          Kepada Yth Bapak/Ibu/Saudara/i
+        </h2>
+  
+        <h1 id="guestName" class="font-esthetics text-2xl text-pink-600 font-semibold animate-fade-in">
+        </h1>
+      </div>
+  
+      <div class="flex justify-center mt-5">
+        <button id="openBtn"
+          class="flex items-center gap-2 text-pink-600 px-6 py-3 rounded-full shadow hover:bg-brown-100 hover:text-white transition text-lg font-medium">
+          <i class="fa-solid fa-envelope"></i>
+          Buka Undangan
+        </button>
+      </div>
     </div>
-    <div class="flex justify-center mt-5">
-      <button id="openBtn" data-aos="fade-up"
-        class="flex items-center justify-center gap-2 text-pink-600 px-6 py-3 rounded-full shadow hover:bg-brown-100 hover:text-white hover:shadow-[#7a5c2e] transition text-lg font-medium">
-        <i id="btnIcon" class="fa-solid fa-envelope"></i>
-        Buka Undangan
-      </button>
-    </div>
+  
   </section>
 
   <!-- Undangan Utama -->
   <section id="invitation" class="hidden w-full text-center px-6">
-    <div class="flex flex-col items-center mb-6 mt-4">
-      <h1 data-aos="fade-down" class="font-esthetic text-5xl text-pink-600 mb-2">The Wedding of</h1>
-      <img data-aos="fade-down" src="assets/images/images.png" alt="Luthfi & Salsabila"
-        class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
-      <h1 data-aos="fade-left" class="font-esthetic text-6xl text-pink-600">Luthfi & Bila</h1>
-
-      <div id="countdown" class="mt-8 flex flex-row gap-3 justify-center text-pink-700"></div>
+    <div class="relative overflow-hidden">
+    
+      <!-- KIRI (setengah masuk) -->
+      <img src="assets/images/gunungan.png"
+        class="absolute -left-20 top-1/2 -translate-y-1/2 w-40 opacity-20 pointer-events-none">
+    
+      <!-- KANAN (setengah masuk + mirror) -->
+      <img src="assets/images/gunungan.png"
+        class="absolute -right-20 top-1/2 -translate-y-1/2 w-40 opacity-20 pointer-events-none scale-x-[-1]">
+    
+      <!-- CONTENT -->
+      <div class="flex flex-col items-center mb-6 mt-4 relative z-10">
+        <h1 data-aos="fade-down" class="font-esthetic text-5xl text-pink-600 mb-2">
+          The Wedding of
+        </h1>
+    
+        <img data-aos="fade-down" src="assets/images/images.png" class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
+    
+        <h1 data-aos="fade-left" class="font-esthetic text-6xl text-pink-600">
+          Luthfi & Bila
+        </h1>
+    
+        <div id="countdown" class="mt-8 flex flex-row gap-3 justify-center text-pink-700"></div>
+      </div>
+    
     </div>
 
     <h2 class="font-arabic text-2xl text-pink-600 mb-2" style="font-size: 2rem;">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
@@ -70,21 +133,33 @@
       bermaksud menyelenggarakan Upacara Pernikahan. Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga,
       apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu pada acara</p>
 
-    <div class="flex flex-col items-center mb-6 mt-4">
-      <img data-aos="fade-right" src="assets/images/pria.png" alt="Luthfi & Salsabila"
-        class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
-      <h2 class="font-esthetic text-4xl text-pink-600 mb-4" data-aos="fade-right">Luthfi Hanadi Fathurohman</h2>
-      <p data-aos="fade-right" class="text-gray-500 italic font-elegant" data-aos="fade-right">Anak dari Bapak
-        Amat Sohibul dan Ibu Supriyati</p>
+      
+    <div class="relative overflow-hidden">
+    
+      <!-- KIRI (setengah masuk) -->
+      <img src="assets/images/gunungan.png"
+        class="absolute -left-20 top-1/2 -translate-y-1/2 w-40 opacity-20 pointer-events-none">
+    
+      <!-- KANAN (setengah masuk + mirror) -->
+      <img src="assets/images/gunungan.png"
+        class="absolute -right-20 top-1/2 -translate-y-1/2 w-40 opacity-20 pointer-events-none scale-x-[-1]">
 
-      <h2 class="font-esthetic text-4xl text-pink-600 mb-5 mt-5" data-aos="fade-down">&</h2>
-      <img data-aos="fade-left" src="assets/images/wanita.png" alt="Luthfi & Salsabila"
-        class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
-      <h2 class="font-esthetic text-4xl text-pink-600 mb-4" data-aos="fade-left">Salsabila Khoirotun Nisa</h2>
-      <p data-aos="fade-right" class="text-gray-500 italic font-elegant" data-aos="fade-left">Anak dari Bapak
-        Imam (Alm) dan Ibu Jaroh</p>
+      <div class="flex flex-col items-center mb-6 mt-4">
+    
+        <img data-aos="fade-right" src="assets/images/pria.png" alt="Luthfi & Salsabila"
+          class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
+        <h2 class="font-esthetic text-4xl text-pink-600 mb-4" data-aos="fade-right">Luthfi Hanadi Fathurohman</h2>
+        <p data-aos="fade-right" class="text-gray-500 italic font-elegant" data-aos="fade-right">Anak dari Bapak
+          Amat Sohibul dan Ibu Supriyati</p>
+    
+        <h2 class="font-esthetic text-4xl text-pink-600 mb-5 mt-5" data-aos="fade-down">&</h2>
+        <img data-aos="fade-left" src="assets/images/wanita.png" alt="Luthfi & Salsabila"
+          class="rounded-full w-40 h-40 object-cover shadow-lg mb-3">
+        <h2 class="font-esthetic text-4xl text-pink-600 mb-4" data-aos="fade-left">Salsabila Khoirotun Nisa</h2>
+        <p data-aos="fade-right" class="text-gray-500 italic font-elegant" data-aos="fade-left">Anak dari Bapak
+          Imam (Alm) dan Ibu Jaroh</p>
+      </div>
     </div>
-
     <div class="bg-pink-50 mt-8 p-6 rounded-2xl shadow-md max-w-md mx-auto">
 
       <h2 class="font-elegant text-2xl text-pink-600 mb-2" style="font-size: 2rem;">Akad</h2>
@@ -116,30 +191,40 @@
       </div>
     </div>
 
-    <div class="max-w-2xl mx-auto px-4 mt-2">
-
-      <h2 class="text-3xl font-elegant mb-6">Ayat Suci Al-Qur'an</h2>
-
-      <p class="text-xl leading-loose text-gray-800 mb-4">
-        وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ
-        مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
-      </p>
-
-      <p class="italic text-gray-600 mb-2">
-        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
-        agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
-        Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
-      </p>
-
-      <p class="text-sm text-gray-500 mt-4">
-        (QS. Ar Rum: 21)
-      </p>
-
+    <div class="relative overflow-hidden">
+    
+      <!-- KIRI (setengah masuk) -->
+      <img src="assets/images/gunungan.png"
+        class="absolute -left-20 top-1/2 -translate-y-1/2 w-40 opacity-20 pointer-events-none">
+    
+      <!-- KANAN (setengah masuk + mirror) -->
+      <img src="assets/images/gunungan.png"
+        class="absolute -right-20 top-1/2 -translate-y-1/2 w-40 opacity-20 pointer-events-none scale-x-[-1]">
+    
+      <div class="max-w-2xl mx-auto px-4 mt-2">
+    
+        <h2 class="text-3xl font-elegant mb-6">Ayat Suci Al-Qur'an</h2>
+    
+        <p class="text-xl leading-loose text-gray-800 mb-4">
+          وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ
+          مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+        </p>
+    
+        <p class="italic text-gray-600 mb-2">
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+          agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
+          Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+        </p>
+    
+        <p class="text-sm text-gray-500 mt-4">
+          (QS. Ar Rum: 21)
+        </p>
+    
+      </div>
     </div>
-
     <div class="bg-pink-50 mt-8 p-6 rounded-2xl shadow-md max-w-md mx-auto" data-aos="fade-up">
       <h2 class="font-esthetic text-3xl text-pink-600 mb-6 text-center">Kirim Hadiah</h2>
-
+    
       <div class="space-y-4">
         <!-- Luthfi -->
         <div class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
@@ -155,7 +240,7 @@
             <i class="fa-solid fa-copy"></i>
           </button>
         </div>
-
+    
         <!-- Salsabila -->
         <div class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
           <div class="flex items-center gap-4">
